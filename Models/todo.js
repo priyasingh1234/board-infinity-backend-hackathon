@@ -23,13 +23,13 @@ duration: {
     index: { expires: String },
 },
 createdAt :{
-    type: Date,
+    type: Date,               
     default: Date.now
 }
 
 })
-const Todo=mongoose.model('Todo',todoSchema)
+const Todo=mongoose.model('Todo',todoSchema)         //Todo db k anaam 1st time yhah declare krte h? --okk
 
 module.exports = {
-    Todo
+    Todo          //but why { } //haan
 }
