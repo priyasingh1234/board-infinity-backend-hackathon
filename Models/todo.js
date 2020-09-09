@@ -18,9 +18,7 @@ creator:{
     required:true
 },
 duration: {
-    type: Date,
-    default: Date.now,
-    index: { expires: String },
+    type: Date
 },
 createdAt :{
     type: Date,               
@@ -28,6 +26,8 @@ createdAt :{
 }
 
 })
+todoSchema.index({"duration":1},{expireAfterSeconds:0})
+
 const Todo=mongoose.model('Todo',todoSchema)         //Todo db k anaam 1st time yhah declare krte h? --okk
 
 module.exports = {
