@@ -7,6 +7,14 @@ const addRouter = require('./router/add')
 var app=express();
 app.use(express.json())
 
+app.get("/",(req,res)=>{
+    res.send({
+        name: "Priya",
+        roll: 1705929,
+        University: "KIIT (D) University"
+    })
+})
+
 app.use("/",listRouter)
 app.use("/",addRouter)
 
